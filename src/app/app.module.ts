@@ -28,6 +28,7 @@ import { ListVenueCityComponent } from './list-venue-city/list-venue-city.compon
 import { ListLocationComponent } from './list-location/list-location.component';
 import { ListFoodTypeComponent } from './list-food-type/list-food-type.component';
 import { ListFoodSubMenuComponent } from './list-food-sub-menu/list-food-sub-menu.component';
+import { EventsComponent } from './events/events.component';
 
 
 // const parentModuleRoutes : Routes = [
@@ -93,7 +94,8 @@ import { ListFoodSubMenuComponent } from './list-food-sub-menu/list-food-sub-men
     ListVenueCityComponent,
     ListLocationComponent,
     ListFoodTypeComponent,
-    ListFoodSubMenuComponent
+    ListFoodSubMenuComponent,
+    EventsComponent
   ],
   imports: [
     FormsModule, //for ngModule 
