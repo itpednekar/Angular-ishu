@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-food-sub-menu',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListFoodSubMenuComponent implements OnInit {
 
-  constructor() { }
+
+  foodSubMenu : any
+
+  constructor(private adminService : AdminService,
+    private router : Router) { }
 
   ngOnInit() {
+    let observableResult = this.adminService.listFoodSubMenu()
+    observableResult.subscribe((data)=>{
+      console.log(data)
+      this.foodSubMenu = data;
+    })
   }
+
+
 
 }

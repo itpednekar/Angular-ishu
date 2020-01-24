@@ -29,6 +29,12 @@ import { ListLocationComponent } from './list-location/list-location.component';
 import { ListFoodTypeComponent } from './list-food-type/list-food-type.component';
 import { ListFoodSubMenuComponent } from './list-food-sub-menu/list-food-sub-menu.component';
 import { EventsComponent } from './events/events.component';
+import { InsertVenueComponent } from './insert-venue/insert-venue.component';
+import { InsertLocationComponent } from './insert-location/insert-location.component';
+import { EditLocationComponent } from './edit-location/edit-location.component';
+import { DeleteLocationComponent } from './delete-location/delete-location.component';
+import { InsertFoodSubMenuComponent } from './insert-food-sub-menu/insert-food-sub-menu.component';
+import { DeleteFoodSubMenuComponent } from './delete-food-sub-menu/delete-food-sub-menu.component';
 
 
 // const parentModuleRoutes : Routes = [
@@ -95,7 +101,13 @@ import { EventsComponent } from './events/events.component';
     ListLocationComponent,
     ListFoodTypeComponent,
     ListFoodSubMenuComponent,
-    EventsComponent
+    EventsComponent,
+    InsertVenueComponent,
+    InsertLocationComponent,
+    EditLocationComponent,
+    DeleteLocationComponent,
+    InsertFoodSubMenuComponent,
+    DeleteFoodSubMenuComponent
   ],
   imports: [
     FormsModule, //for ngModule 
@@ -117,7 +129,19 @@ import { EventsComponent } from './events/events.component';
       {path:"paymentdetails",component :PaymentdetailsComponent},
       {path:"bookanevent",component :BookaneventComponent},
       {path:"bookappointment",component :BookappointmentComponent},
-      {path:"clientfeedback",component :RegisterComponent}
+      {path:"clientfeedback",component :RegisterComponent},
+      {path:"list-users",component :ListUsersComponent},
+      {path:"list-events",component :ListEventsComponent},
+      {path:"list-events-desc",component :ListEventsDescComponent},
+      {path:"list-food-type",component :ListFoodTypeComponent},
+      {path:"list-food-sub-menu",component :ListFoodSubMenuComponent},
+      {path:"list-location",component :ListLocationComponent},
+      {path:"list-venue-city",component :ListVenueCityComponent},
+      {path:"insert-venue",component :InsertVenueComponent},
+      {path:"insert-location",component :InsertLocationComponent},
+      {path:"edit-location/:locationId",component :EditLocationComponent},
+      {path:"delete-location/:locationId",component :DeleteLocationComponent}
+
     ])
   ],
   exports:[RouterModule],

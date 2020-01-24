@@ -9,8 +9,7 @@ import { ClientService } from '../client.service';
 })
 export class RegisterComponent implements OnInit {
 
-
-  user : any;
+  message : string;
 
   constructor(private router : Router,
               private clientService : ClientService) { }
@@ -18,15 +17,28 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  onAdd()
+  onRegister(entireData)
   {
-      //  let observableResult = this.clientService.insertUser(this.user);
-      //  observableResult.subscribe((result)=>{
-      //   result = this.user;
-      //   console.log(result);
-      //    this.router.navigate(['/add-member']);
-      //  })
-  }
+    console.log("inside onRegister");
+    let user = entireData.form.value;
+    console.log(user);
 
+    let observableResult=
+        this.clientService.insertUser(user)
+
+    observableResult.subscribe((result: any)=>{
+      console.log("result "+result);
+
+      if(result.name == "ValidationError")
+      {
+        this.message = "Data is invalid!";
+      }
+      else{
+        this.message = "Record Added!";
+      }
+    });
+  this.router.navigate(['login']);
+       
+  }
 
 }

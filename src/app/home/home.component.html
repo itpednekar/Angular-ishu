@@ -161,8 +161,7 @@
               <li><a routerLink="/feedback">Feedback</a></li>
               <li><a routerLink="/contact-us">Contact Us</a></li>
             </ul>
-            
-            
+                  
                   <ul *ngSwitchCase="'CLIENT'" class="nav navbar-nav navbar-right">
                       <li><a routerLink="/mydetails">My Details</a></li>
                       <li><a routerLink="/bookanevent">Book an Event</a></li>
@@ -175,10 +174,12 @@
            
              
                   <ul *ngSwitchCase="'ADMIN'"  class="nav navbar-nav navbar-right">
-                      <li><a routerLink="/home/mydetails">My Admin</a></li>
-                      <li><a routerLink="/home/bookanevent">Book an Event</a></li>
-                      <li><a routerLink="/home/paymentdetails">Payment Details</a></li>
-                      <li><a routerLink="/home/bookappointmet">Book Appointment</a></li> 
+                      <li><a routerLink="/list-users">List Users</a></li>
+                      <li><a routerLink="/list-events-desc">List Event Descriptions</a></li>
+                      <li><a routerLink="/list-food-type">List FoodTypes</a></li>
+                      <li><a routerLink="/list-food-sub-menu">List Food SubMenus</a></li> 
+                      <li><a routerLink="/list-venue-city">List VenueCities</a></li>
+                      <li><a routerLink="/list-location">List Locations</a></li>
                       <li><a routerLink="/home">Logout</a></li>
                 </ul>
              

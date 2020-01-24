@@ -28,6 +28,6 @@ export class ClientService {
   }
   insertUser(user)
   {
-     
-  }
+     return this.http.post("http://localhost:8080/Day1.1/client/register",user);
+  };
 }

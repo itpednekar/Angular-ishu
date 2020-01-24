@@ -8,7 +8,7 @@ import { ClientService } from '../client.service';
 })
 export class FeedbackComponent implements OnInit {
 
-  feedback : any
+  feedback : any;
 
   constructor(private service : ClientService) { }
 
